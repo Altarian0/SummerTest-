@@ -27,7 +27,12 @@ namespace SummerTest.Control
         {
             InitializeComponent();
         }
-
+        
+        /// <summary>
+        /// Перевод фокуса на следующее поле после заполнения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (((TextBox)sender).Text.Length == MaxCountNum)
@@ -51,6 +56,11 @@ namespace SummerTest.Control
 
         }
 
+        /// <summary>
+        /// Перевод фокуса на предыдущее поле после очистки
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Back)
@@ -65,6 +75,11 @@ namespace SummerTest.Control
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = "0123456789".IndexOf(e.Text) < 0;
