@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="SummerTest.Control.NumericTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SummerTest.Control"
+             mc:Ignorable="d" d:DesignWidth="200" Height="20">
+    <TextBox x:Name="MainTextBox" FontSize="14" VerticalContentAlignment="Center" TextChanged="MainTextBox_TextChanged" PreviewKeyDown="MainTextBox_PreviewKeyDown" PreviewTextInput="MainTextBox_PreviewTextInput"/>
+</UserControl>
