@@ -11,6 +11,8 @@ namespace SummerTest.Database
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Windows.Media;
     using System.Windows.Media.Imaging;
 
     public partial class Charity
@@ -19,16 +21,25 @@ namespace SummerTest.Database
         public string CharityName { get; set; }
         public string CharityDescription { get; set; }
         public string CharityLogo { get; set; }
-        public BitmapImage CharityImage
+        private ImageSource charityImage;
+        public ImageSource CharityImage
         {
             get
             {
-                BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.BeginInit();
-                bitmapImage.UriSource = new Uri("\\Resource\\"+CharityLogo, UriKind.RelativeOrAbsolute);
-                bitmapImage.EndInit();
-
-                return bitmapImage;
+                if (charityImage == null)
+                {
+                    BitmapImage bitmapImage = new BitmapImage();
+                    bitmapImage.BeginInit();
+                    bitmapImage.UriSource = new Uri(@"..\..\Resource\" + CharityLogo, UriKind.RelativeOrAbsolute);
+                    bitmapImage.EndInit();
+                    
+                    charityImage = bitmapImage;
+                }
+                return charityImage;
+            }
+            set
+            {
+                charityImage = value;
             }
         }
         public bool IsActive { get; set; }

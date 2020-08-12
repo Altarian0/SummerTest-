@@ -30,6 +30,7 @@
         <Button Content="Повтор драгдропа" Grid.Column="2" HorizontalAlignment="Left" Margin="26,16,0,0" Grid.Row="2" VerticalAlignment="Top" Width="178" Click="Button_Click" Height="70"/>
         <Button Content="Недоавторизация" Grid.Column="2" HorizontalAlignment="Left" Margin="26,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" Click="Button_Click_1" Height="70"/>
         <Button x:Name="CharityDragDrop" Content="Драгдроп Благотворит" HorizontalAlignment="Left" Margin="20,16,0,0" Grid.Row="2" VerticalAlignment="Top" Width="178" Height="70" Click="CharityDragDrop_Click"/>
+        <Button x:Name="RotateImageButton" Content="Врщение и сохранение" HorizontalAlignment="Left" Margin="20,17,0,0" Grid.Row="3" VerticalAlignment="Top" Width="178" Height="70" Click="RotateImageButton_Click"/>
 
     </Grid>
 </Page>

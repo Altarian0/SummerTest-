@@ -201,5 +201,10 @@ namespace SummerTest.Pages
         {
             NavigationService.Navigate(new CharityDragDropPage());
         }
+
+        private void RotateImageButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new CharityImageRotatePage());
+        }
     }
 }

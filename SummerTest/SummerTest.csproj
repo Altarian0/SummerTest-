@@ -153,6 +153,9 @@
     <Compile Include="Pages\CharityDragDropPage.xaml.cs">
       <DependentUpon>CharityDragDropPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\CharityImageRotatePage.xaml.cs">
+      <DependentUpon>CharityImageRotatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Repeat\DragAndDopRep.xaml.cs">
       <DependentUpon>DragAndDopRep.xaml</DependentUpon>
     </Compile>
@@ -187,6 +190,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CharityDragDropPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CharityImageRotatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
