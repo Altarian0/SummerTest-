@@ -206,5 +206,15 @@ namespace SummerTest.Pages
         {
             NavigationService.Navigate(new CharityImageRotatePage());
         }
+
+        private void ChartButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new DiagramPage());
+        }
+
+        private void HttpReqButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new HttpReqPage());
+        }
     }
 }

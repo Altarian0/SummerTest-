@@ -10,7 +10,15 @@
       Title="AuthPage">
 
     <Grid Background="White">
-        <Button Content="Button" HorizontalAlignment="Left" Height="30" Margin="564,360,0,0" VerticalAlignment="Top" Width="102" Click="Button_Click"/>
-        <control:PhoneMask x:Name="PhoneNum" Margin="0,348,365,52"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="323*"/>
+            <RowDefinition Height="127*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="583*"/>
+            <ColumnDefinition Width="217*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Button" Height="30" Margin="0,0,10,60" VerticalAlignment="Bottom" Click="Button_Click" Grid.Row="1" HorizontalAlignment="Right" Width="102" Grid.Column="1"/>
+        <control:PhoneMask x:Name="PhoneNum" Margin="0,0,0,52" VerticalAlignment="Bottom" Grid.Row="1" HorizontalAlignment="Left" Width="435"/>
     </Grid>
 </Page>

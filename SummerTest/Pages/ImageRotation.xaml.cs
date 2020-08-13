@@ -141,14 +141,15 @@ namespace SummerTest.Pages
 
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "jpg files (*.jpg)|*.jpg";
-
-                string name = saveFileDialog.FileName;
+                saveFileDialog.ShowDialog();
 
                 var encoder = new JpegBitmapEncoder();
+                
+                if(saveTransformed != null)
+                    encoder.Frames.Add(BitmapFrame.Create(saveTransformed));
+                else
+                    encoder.Frames.Add(BitmapFrame.Create(GetImageFromPath(path)));
 
-                encoder.Frames.Add(BitmapFrame.Create(saveTransformed));
-
-                saveFileDialog.ShowDialog();
 
                 if (saveFileDialog.FileName == "")
                 {
@@ -181,6 +182,18 @@ namespace SummerTest.Pages
 
             printDialog.ShowDialog();
             printDialog.PrintVisual(TestImage, "123");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BrowsePicFromWebButton_Click(object sender, RoutedEventArgs e)
+        {
+            path = ImagePathText.Text;
+
+            TestImage.Source = GetImageFromPath(path);
         }
     }
 }

@@ -9,16 +9,26 @@
       Title="ImageRotation">
 
     <Grid Background="White">
-        <Button x:Name="OpenPicButton" Content="Browse" HorizontalAlignment="Left" Margin="10,304,0,0" VerticalAlignment="Top" Width="213" Height="36" Click="OpenPicButton_Click"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="289" Margin="10,10,0,0" VerticalAlignment="Top" Width="389">
-            <Image x:Name="TestImage" HorizontalAlignment="Left" Height="289" Margin="-1" VerticalAlignment="Top" Width="389" RenderTransformOrigin="0.5,0.5">
-               
-            </Image>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="301*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="106*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="252*"/>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="367*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="OpenPicButton" Content="Browse" Margin="10,3,29,4" Click="OpenPicButton_Click" Grid.Row="1"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10,10,34,2" Grid.ColumnSpan="2">
+            <Image x:Name="TestImage" Margin="-1" RenderTransformOrigin="0.5,0.5"/>
         </Border>
-        <Button x:Name="RigthButton" Content="Вправо" HorizontalAlignment="Left" Height="41" Margin="459,35,0,0" VerticalAlignment="Top" Width="45" Click="RigthButton_Click_1"/>
-        <Button x:Name="LeftButton" Content="Влево" HorizontalAlignment="Left" Height="41" Margin="459,91,0,0" VerticalAlignment="Top" Width="45" Click="LeftButton_Click"/>
-        <Button x:Name="SavePicButton" Content="Save" HorizontalAlignment="Left" Margin="268,304,0,0" VerticalAlignment="Top" Width="131" Height="36" Click="SavePicButton_Click"/>
-        <Button Content="Print" HorizontalAlignment="Left" Margin="459,265,0,0" VerticalAlignment="Top" Width="119" Height="34" Click="Button_Click"/>
+        <Button x:Name="RigthButton" Content="Вправо" HorizontalAlignment="Left" Height="41" Margin="26,35,0,0" VerticalAlignment="Top" Width="45" Click="RigthButton_Click_1" Grid.Column="2"/>
+        <Button x:Name="LeftButton" Content="Влево" HorizontalAlignment="Left" Height="41" Margin="26,91,0,0" VerticalAlignment="Top" Width="45" Click="LeftButton_Click" Grid.Column="2"/>
+        <Button x:Name="SavePicButton" Content="Save" Margin="16,3,34,4" Click="SavePicButton_Click" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="Print" HorizontalAlignment="Left" Margin="26,0,0,2" Width="119" Click="Button_Click" Grid.Column="2" Height="34" VerticalAlignment="Bottom"/>
+        <Button x:Name="BrowsePicFromWebButton" Content="Browse" Margin="26,60,186,10" Click="BrowsePicFromWebButton_Click" Grid.Row="2" Grid.Column="2"/>
+        <TextBox Name="ImagePathText" HorizontalAlignment="Left" Height="36" Margin="10,60,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="413" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Page>

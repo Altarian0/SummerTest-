@@ -21,16 +21,20 @@
             <ColumnDefinition Width="355*"/>
             <ColumnDefinition Width="224*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="AuthButton" Content="Маска ввода" FontSize="20" Margin="54,14,51,14" Grid.Column="1" Click="AuthButton_Click" Grid.Row="1"/>
+        <Border Margin="54,14,51,14"  BorderThickness="1" Grid.Column="1"  Grid.Row="1" >
+            <Button x:Name="AuthButton" Content="Маска ввода" BorderBrush="White" FontSize="20" Click="AuthButton_Click" />
+        </Border>
         <Button x:Name="FunctionButton" Content="ДрагДроп&#xD;&#xA;" Margin="54,16,51,13" FontSize="20" Grid.Column="1" Grid.Row="2" Click="FunctionButton_Click"/>
         <Button x:Name="TreningButton" Content="Вращение изображения" Margin="53,17,52,16" FontSize="20" Grid.Column="1" Grid.Row="3" Click="TreningButton_Click"/>
         <Label x:Name="ExecTimeLabel" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="173,20,172,20" FontSize="20"/>
 
-        <Button x:Name="RefreshButton" Content="Refresh" HorizontalAlignment="Left" Margin="20,20,0,6" Width="50" Click="RefreshButton_Click"/>
-        <Button Content="Повтор драгдропа" Grid.Column="2" HorizontalAlignment="Left" Margin="26,16,0,0" Grid.Row="2" VerticalAlignment="Top" Width="178" Click="Button_Click" Height="70"/>
-        <Button Content="Недоавторизация" Grid.Column="2" HorizontalAlignment="Left" Margin="26,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" Click="Button_Click_1" Height="70"/>
-        <Button x:Name="CharityDragDrop" Content="Драгдроп Благотворит" HorizontalAlignment="Left" Margin="20,16,0,0" Grid.Row="2" VerticalAlignment="Top" Width="178" Height="70" Click="CharityDragDrop_Click"/>
-        <Button x:Name="RotateImageButton" Content="Врщение и сохранение" HorizontalAlignment="Left" Margin="20,17,0,0" Grid.Row="3" VerticalAlignment="Top" Width="178" Height="70" Click="RotateImageButton_Click"/>
+        <Button x:Name="RefreshButton" Content="Refresh" Margin="20,20,101,20" Click="RefreshButton_Click"/>
+        <Button Content="Повтор драгдропа" Grid.Column="2" Margin="26,16,20,13" Grid.Row="2" Click="Button_Click"/>
+        <Button Content="Недоавторизация" Grid.Column="2" Margin="26,18,20,10" Grid.Row="1" Click="Button_Click_1"/>
+        <Button x:Name="CharityDragDrop" Content="Драгдроп Благотворит" Margin="20,16,23,13" Grid.Row="2" Click="CharityDragDrop_Click"/>
+        <Button x:Name="RotateImageButton" Content="Врщение и сохранение" Margin="20,17,23,16" Grid.Row="3" Click="RotateImageButton_Click"/>
+        <Button x:Name="ChartButton" Content="Графики" Margin="20,10,23,18" Grid.Row="1" Click="ChartButton_Click"/>
+        <Button x:Name="HttpReqButton" Content="HTTP запросы" Grid.Column="2" Margin="26,23,20,10" Grid.Row="3" Click="HttpReqButton_Click"/>
 
     </Grid>
 </Page>
